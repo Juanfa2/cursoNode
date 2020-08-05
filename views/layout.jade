@@ -1,0 +1,20 @@
+doctype html
+html(lang="es")
+    head
+        title Pagina node
+        meta(charset="utf-8")
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css")
+        link(href="/public/css/app.css", rel= "stylesheet")
+    body
+        nav(class="large-padding black white-text")
+            ul
+                if (typeof user != "undefined" )
+                    li #{user.email}
+                li 
+                    a(href="/app") Inicio
+                li
+                    a(href="/app/imagenes/new") Agregar Imagen
+                li 
+                    a(href="/app/imagenes") Mis imagenes
+                
+        block contenido    
